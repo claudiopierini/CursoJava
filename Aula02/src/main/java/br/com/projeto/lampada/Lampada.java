@@ -9,26 +9,27 @@ package br.com.projeto.lampada;
  */
 public class Lampada {
 
-	public double watts;
 	public String fabricante;
-	
-	public boolean ligar() {
-		System.out.println("Ligando");
-		return false;		
-	}
-	
-	public void desligar(boolean b) {
-		System.out.println("Desligando");
-		
-	}
+	public int watts;
+	public boolean ligada;
 
-	/**
-	 * @param watts
-	 * @param fabricante
-	 */
-	public Lampada(double watts, String fabricante) {
-
-		this.watts = watts;
+	public Lampada(String fabricante, int watts) {
 		this.fabricante = fabricante;
+		this.watts = watts;
+		this.ligada = false;
+	}
+
+	public void ligar() {
+		System.out.println("Ligando... ");
+		ligada = true;
+	}
+
+	public void desligar() {
+		System.out.println("desligando... ");
+		ligada = false;
+	}
+
+	public boolean estaLigada() {
+		return ligada;
 	}
 }
