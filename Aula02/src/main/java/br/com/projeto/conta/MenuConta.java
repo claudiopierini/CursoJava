@@ -3,22 +3,29 @@ package br.com.projeto.conta;
 import java.util.Scanner;
 
 public class MenuConta {
-
+	
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 
 		int opcao = mostrarMenu(scanner);
-		while (opcao != 4) {
-			if (opcao == 1) {
-				System.out.println("Ler valor do saque e sacar");
-			} else if (opcao == 2) {
-				System.out.println("Ler valor do deposito e depositar");
-			} else if (opcao == 3) {
-				System.out.println("Mostrar saldo");
-			} else {
-				System.out.println("Opcao invalida!");
-			}
-			opcao = mostrarMenu(scanner);
+		
+		switch (opcao) {
+		case 1:
+			System.out.println("Ler valor do saque e sacar");
+			
+			break;
+		case 2:
+			System.out.println("Ler valor do deposito e depositar");
+			break;
+		case 3:
+			System.out.println("Mostrar saldo");
+			break;
+		case 4:
+			System.out.println("Sair");
+			break;
+		default:
+			System.out.println("Opcao invalida!");
+			break;
 		}
 		scanner.close();
 	}
@@ -30,4 +37,5 @@ public class MenuConta {
 		System.out.println("4. Sair");
 		return scanner.nextInt();
 	}
+	
 }
