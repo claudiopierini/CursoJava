@@ -11,6 +11,8 @@ public class ContaTest {
 		
 		conta.depositar(100);
 		Assert.assertEquals(Double.valueOf(100), Double.valueOf(conta.saldo));
+		conta.sacar(100);
+		Assert.assertEquals(Double.valueOf(100), Double.valueOf(conta.saldo));
 	}
 
 }
